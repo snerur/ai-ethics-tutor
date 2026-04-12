@@ -79,24 +79,29 @@ def chat_interface(llm):
             AIMessage(content="Hello! I am your AI Ethics Tutor. Ask me any questions about AI governance, ethics frameworks, or philosophical foundations.")
         ]
         
-    for msg in st.session_state.chat_history:
+    for i, msg in enumerate(st.session_state.chat_history):
         role = "user" if isinstance(msg, HumanMessage) else "assistant"
         with st.chat_message(role):
             st.write(msg.content)
             
     if prompt := st.chat_input("Ask a question regarding AI Ethics..."):
+        # Append and immediately display user message
         st.session_state.chat_history.append(HumanMessage(content=prompt))
         with st.chat_message("user"):
             st.write(prompt)
             
+        # Display assistant response placeholder
         with st.chat_message("assistant"):
             with st.spinner("Thinking..."):
                 try:
                     response = llm.invoke(st.session_state.chat_history)
-                    st.write(response.content)
-                    st.session_state.chat_history.append(AIMessage(content=response.content))
+                    msg_content = response.content
+                    st.write(msg_content)
+                    st.session_state.chat_history.append(AIMessage(content=msg_content))
                 except Exception as e:
-                    st.error(f"An error occurred: {e}")
+                    st.error(f"OpenAI API Error: {e}")
+                    # Remove the failed message from history so they can retry
+                    st.session_state.chat_history.pop()
 
 # -- Sidebar --
 with st.sidebar:
@@ -105,6 +110,17 @@ with st.sidebar:
     api_key = st.text_input("Enter API Key", type="password")
     
     llm = init_llm(provider, api_key)
+    
+    if llm:
+        st.success(f"✅ Context initialized for {provider}!")
+        if st.button("Test Connection"):
+            with st.spinner("Pinging API..."):
+                try:
+                    llm.invoke("Respond with 'Connection successful'.")
+                    st.success("Network check passed! Connection is stable.")
+                except Exception as e:
+                    st.error(f"Connection failed: {e}")
+
     st.markdown("---")
     
     st.markdown("## Navigation")
