@@ -294,6 +294,48 @@ elif selected == "6. Interactive Quiz":
             "options": ["Technology", "Transparency", "Testing", "Truthfulness"],
             "answer": "Transparency",
             "explanation": "Transparency ensures that stakeholders understand how a model makes its decisions."
+        },
+        {
+            "prompt": "4. Which framework provides proactive guidelines like Govern, Map, Measure, and Manage to handle AI risks?",
+            "options": ["EU AI Act", "NIST AI RMF", "OECD AI Principles", "FATES"],
+            "answer": "NIST AI RMF",
+            "explanation": "The NIST AI Risk Management Framework provides core functions: Govern, Map, Measure, and Manage to help organizations foster trustworthy AI."
+        },
+        {
+            "prompt": "5. What does the 'Alignment Problem' refer to in AI ethics?",
+            "options": ["Formatting model output", "Ensuring AI goals match human values", "Aligning data with databases", "Aligning policies across countries"],
+            "answer": "Ensuring AI goals match human values",
+            "explanation": "The Alignment Problem refers to the challenge of building AI systems whose objectives properly align with complex human values."
+        },
+        {
+            "prompt": "6. Under which ethical framework is the focus placed on the moral character of the AI developer?",
+            "options": ["Deontology", "Consequentialism", "Virtue Ethics", "Utilitarianism"],
+            "answer": "Virtue Ethics",
+            "explanation": "Virtue Ethics focuses on the person carrying out an action and their traits, such as prudence or honesty, rather than rules or outcomes."
+        },
+        {
+            "prompt": "7. In Yoshua Bengio's discussion on AI risks, what describes the shift from passive AI systems to autonomous goal-seeking ones?",
+            "options": ["Increasing Transparency", "Decreasing Safety", "Increasing Agency", "Deceptive Behavior"],
+            "answer": "Increasing Agency",
+            "explanation": "Increasing Agency is the profound shift where AI morphs from a passive tool into an agent that plans and acts autonomously."
+        },
+        {
+            "prompt": "8. What is the proposed 'Scientist AI' concept designed to solve?",
+            "options": ["Speed up commercial AI", "Act entirely autonomously", "Improve mathematical calculations", "Focus explicitly on safety research without acting as a free agent"],
+            "answer": "Focus explicitly on safety research without acting as a free agent",
+            "explanation": "A 'Scientist AI' is conceptualized as a highly capable but non-agentic system strictly bounded to hypothesis testing and safety research."
+        },
+        {
+            "prompt": "9. Which principle emphasizes ensuring that an AI system provides societal value and actively does good?",
+            "options": ["Beneficence", "Transparency", "Accountability", "Sustainability"],
+            "answer": "Beneficence",
+            "explanation": "Beneficence is the moral obligation to act for the benefit of others, maximizing societal value while minimizing harm."
+        },
+        {
+            "prompt": "10. In the context of AI failures, historical biases found in hiring models are typically a result of:",
+            "options": ["Too many developers", "Flawed historical training data", "Overfitting on small datasets", "Fast processors"],
+            "answer": "Flawed historical training data",
+            "explanation": "AI systems learn from the data they are trained on; if historical data reflects human biases (e.g., favoring male applicants), the AI will replicate and scale those biases."
         }
     ]
     
