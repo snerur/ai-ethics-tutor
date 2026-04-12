@@ -40,6 +40,7 @@ h1, h2, h3 {
 """, unsafe_allow_html=True)
 
 # -- Helper Functions --
+@st.cache_resource(show_spinner=False)
 def init_llm(provider, api_key):
     if not api_key:
         return None
