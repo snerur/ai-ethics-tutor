@@ -22,26 +22,19 @@ h1, h2, h3 {
     color: #0b3d91;
 }
 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
     background-color: #f1f1f1;
     color: #333;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     font-size: 14px;
     border-top: 1px solid #ccc;
-    z-index: 999;
+    margin-top: 50px;
+    border-radius: 5px;
 }
 .disclaimer {
     font-size: 12px;
     color: #d9534f;
     font-weight: bold;
-}
-/* Ensure the main content doesn't get hidden behind the fixed footer */
-div.block-container {
-    padding-bottom: 120px;
 }
 </style>
 """, unsafe_allow_html=True)
