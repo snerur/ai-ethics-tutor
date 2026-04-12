@@ -1,0 +1,9 @@
+streamlit
+streamlit-option-menu
+langchain
+langchain-openai
+langchain-google-genai
+langchain-anthropic
+langchain-groq
+ydata-profiling
+pandas
