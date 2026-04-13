@@ -1,7 +1,7 @@
-streamlit==1.50.0
-streamlit-option-menu==0.4.0
-langchain-core==0.3.84
-langchain-openai==0.3.35
-langchain-google-genai==2.1.12
-langchain-anthropic==0.3.22
-langchain-groq==0.3.8
+streamlit
+streamlit-option-menu
+langchain-core
+langchain-openai
+langchain-google-genai
+langchain-anthropic
+langchain-groq
